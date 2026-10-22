@@ -18,3 +18,13 @@ meta |>
 
 # !!!! сохраните график как объект в окружении под именем g
 # !!!!вызов class(g) должен возвращать "gg"     "ggplot"
+ggplot(aes(x = Topic, fill = Genre)) +
+  geom_bar() +
+  labs(
+    x = NULL,
+    y = NULL,
+    title = "Old French Data"
+  ) +
+  coord_flip() +
+  theme_bw() -> g
+class(g)
